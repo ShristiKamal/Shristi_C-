@@ -1,4 +1,6 @@
-#include<iostream>
+
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Student
@@ -16,7 +18,7 @@ public:
         attendance = a;
     }
 
-    
+
     void operator++()
     {
         ++attendance;
@@ -33,11 +35,27 @@ public:
 
 int main()
 {
-    Student s1(101, "Rahul", 20);
+    int r, a;
+    string n;
 
-    cout << "Before Increment:" << endl;
+    
+    cout << "Enter Roll Number: ";
+    cin >> r;
+
+    cout << "Enter Name: ";
+    cin >> ws;
+    getline(cin, n);
+
+    cout << "Enter Attendance: ";
+    cin >> a;
+
+    
+    Student s1(r, n, a);
+
+    cout << "\nBefore Increment:" << endl;
     s1.display();
 
+    
     ++s1;
 
     cout << "\nAfter Increment:" << endl;
